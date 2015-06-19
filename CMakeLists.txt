@@ -9,7 +9,7 @@ macro(add_thirdparty_library DIR LIBNAME)
     message("add lib: ${LIBNAME}")
 endmacro(add_thirdparty_library)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ggdb -g3  -fPIC -Wall -Wextra -Wno-unused-variable -Wno-unused-local-typedefs -Wno-unused-parameter -rdynamic -fpermissive -std=c++11 ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ggdb -g3  -fPIC -Wall -Wextra -Wno-unused-function -Wno-unused-variable -Wno-unused-local-typedefs -Wno-unused-parameter -rdynamic -fpermissive -std=c++11 ")
 
 #set gflags 
 add_thirdparty_library(${CMAKE_CURRENT_SOURCE_DIR}/gflags gflags)
