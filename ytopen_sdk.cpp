@@ -139,7 +139,7 @@ void ytopen_sdk::NewPerson(const string& person_id, const string &person_name, c
     writer.String("person_name"); writer.String(person_name.c_str());
     writer.String("group_ids");
     writer.StartArray();
-    for(int i = 0; i < group_ids.size(); i++)
+    for(unsigned int i = 0; i < group_ids.size(); i++)
         writer.String(group_ids[i].c_str());
     writer.EndArray();
     writer.String("tag"); writer.String(tag.c_str());
@@ -188,7 +188,7 @@ void ytopen_sdk::AddFace(const string& person_id, const std::vector<string>& ima
     writer.String("app_id"); writer.String(app_id.c_str());
     writer.String("images");
     writer.StartArray();
-    for(int i = 0; i < imageDatas.size(); i++)
+    for(unsigned int i = 0; i < imageDatas.size(); i++)
     {
         string encode_data = b64_encode(imageDatas[i]);
         writer.String(encode_data.c_str());
@@ -220,7 +220,7 @@ void ytopen_sdk::DelFace(const string& person_id, const std::vector<string>& fac
     writer.String("person_id"); writer.String(person_id.c_str());
     writer.String("face_ids");
     writer.StartArray();
-    for(int i = 0; i < face_ids.size(); i++)
+    for(unsigned int i = 0; i < face_ids.size(); i++)
     {
         writer.String(face_ids[i].c_str());
     }
